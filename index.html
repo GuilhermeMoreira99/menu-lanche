@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet' />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="./styles/output.css" />
+
+    <title>Portal de Lanches</title>
+</head>
+<body>
+
+    <!-- topo -->
+    <header id="header-top" class="grid justify-center items-center py-3 text-white w-full">
+
+        <div class="absolute top-5 right-5 fa-2x">
+            <div class="">
+                <a href="https://www.instagram.com/guimoreira.dev/" target="_blank" class="hover:scale-110 duration-300 flex justify-center items-center gap-1">
+                    <i class="fa-brands fa-instagram"></i>
+                    <p class="text-sm text-center">Instagram</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="py-1 gap-1 flex justify-center items-center">
+            <img src="/assets/ICON.PNG" alt="" class="w-32 h-32 rounded-full">
+        </div>
+        <div class="py-1 gap-1 grid justify-center items-center text-center">
+            <h2 class="text-xl font-semibold">Dog Portal</h2>
+            <p class="text-sm">Faça seu pedido</p>
+            <p id="hour-check" class="text-sm rounded-full px-4 py-1"></p>
+        </div>  
+
+    </header>
+    <!-- /topo -->
+
+    <!-- navbar -->
+    <nav class="py-1 w-full flex justify-center items-center bg-stone-700">
+        <div class="text-white w-screen flex justify-evenly items-center gap-3 text-nowrap text-sm">
+            <p><a href="#identificador-hotdog" class="focus:font-bold">Cachorro-quente</a></p>
+            <p><a href="#identificador-lanche" class="focus:font-bold">Lanches</a></p>
+            <p><a href="#identificador-hotdog" class="focus:font-bold">Porções</a></p>
+            <p><a href="#identificador-hotdog" class="focus:font-bold">Bebidas</a></p>
+        </div>
+    </nav>
+    <!-- /navbar -->
+
+    <!-- maincontent -->
+    <main id="main-menu" class="grid grid-cols-1 w-full justify-center items-center">
+
+        <div id="identificador-hotdog" class="flex justify-start items-center text-center border-b-2 py-1 mx-2">
+            <p class="ml-3 text-xl text-black/90">Cachorro-quente</p>
+        </div>
+
+        <div id="container-hotdog" class="grid grid-cols-2 max-lg:grid-cols-1">
+
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/dog 1.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button class="active:scale-150 duration-200">
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer" data-name="Da Casa" data-price="18.90"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/dog 2.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/dog 3.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/dog 4.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="identificador-lanche" class="flex justify-start items-center text-center border-b-2 py-1 mx-2">
+            <p class="ml-3 text-xl text-black/90">Lanches</p>
+        </div>
+
+        <div id="container-lanche" class="grid grid-cols-2 max-lg:grid-cols-1">
+
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/lanche 1.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/lanche 2.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/lanche 3.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+            <div id="container-item" class="flex gap-3 my-2 mx-2 p-2 cursor-pointer">
+                <img class="w-28 h-28 rounded max-sm:w-24 max-sm:h-24 hover:-rotate-2 hover:scale-105 duration-300" src="/assets/lanche 4.jpg" alt="">
+                <div class="">
+                    <p class="font-bold text-base max-sm:text-sm border-b-2 text-black/90" style="border-color: #851c1c;">Cachorro-quente da Casa</p>
+                    <p class="text-pretty text-sm max-sm:text-xs text-black/90">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad.</p>                
+                </div>
+
+                <div class="grid">
+                    <button>
+                        <i id="add-cart-btn" class="fa-solid fa-circle-plus cursor-pointer"></i>
+                    </button>
+                    <p class="font-bold text-nowrap max-sm:text-sm text-black/90">R$ 18.90</p>
+                </div>
+            </div>
+
+        </div>        
+
+    </main>
+    <!-- /maincontent -->
+     
+    <!-- modal cart -->
+    <section id="cart-modal" class="fixed top-0 left-0 justify-center items-center w-full h-full z-[99] bg-black/40 hidden">
+
+        <div id="janela" class="p-5 rounded-md min-w-[85%] md:min-w-[600px]" style="background-color: #f7f7f7;"> 
+            
+            <p id="warn-cart" class="font-bold text-center text-2xl text-red-600 hidden">Loja fechada</p>
+
+            <h2 class="font-bold text-center text-xl">Meu carrinho</h2>
+
+            <div id="cart-items" class="flex justify-between mb-2 flex-col"></div>
+
+            <p class="font-bold text-center">Total: <span id="cart-price">R$ 0,00</span></p>
+
+            <div class="py-5">
+                <p class="p-2 text-sm font-semibold">Endereço da entrega:</p>
+                <input type="text" name="" id="address" placeholder="Insira seu endereço aqui" class="w-full h-8 p-2 rounded border-2">
+                <p id="warn" class="hidden p-2 text-sm font-semibold text-red-600">Insira seu endereço para finalizar o pedido!</p>    
+            </div>
+            
+            <div class="flex justify-between items-center">
+                <button id="close-modal-btn" class="p-2 bg-black/60 text-white rounded">Fechar</button>
+                <button id="checkout-btn" class="bg-green-600 text-white p-2 rounded active:active:scale-110 duration-150">Finalizar Pedido</button>
+            </div>
+
+        </div>
+
+    </section>
+    <!-- /modal cart -->
+
+    <!-- cart btn -->
+    <footer>
+        <div id="cart-btn" class="fixed justify-center items-center right-3 bottom-5" style="color: white;">
+            <div class="flex justify-center items-center gap-2 bg-red-800/70 hover:bg-red-800 rounded-full w-14 h-14 cursor-pointer hover:scale-110">
+                <i class="fa-solid fa-cart-shopping rounded-full"></i>
+                <span id="cart-count" class="text-sm">0</span>
+            </div>
+        </div>
+    </footer>
+    <!-- cart btn -->
+
+</body>
+
+    <script src="/script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
+</html>
