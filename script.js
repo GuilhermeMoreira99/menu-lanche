@@ -143,13 +143,13 @@ addressInput.addEventListener("input", function(event){
 function checkHour(){
     const data = new Date();
     const hora = data.getHours();
-    return hora >= 18 && hora <= 23;
+    return hora >= 1 && hora <= 23;
 }
 
 const isOpen = checkHour()
 
 if(isOpen){
-    hourInfo.textContent = ("Loja aberta: 18:00 às 23:00");
+    hourInfo.textContent = ("Loja aberta: 18:00 às 23:00 --- Exemplo Portifólio");
     hourInfo.classList.remove("bg-red-500");
     hourInfo.classList.add("bg-green-600")
 }else{
