@@ -75,7 +75,7 @@ function updateCartModal (){
                 <div>
                     <p class="font-bold">${item.name}</p>                
                     <p>Quantidade: ${item.quantidade}</p>                
-                    <p class="font-bold">R$ ${item.price}</p>               
+                    <p class="font-bold">R$ ${parseFloat(item.price).toLocaleString('pt-BR', {minimumFractionDigits: 2, maximumFractionDigits: 2})}</p>               
                 </div>
 
                 <div>
@@ -159,6 +159,10 @@ if(isOpen){
     hourInfo.classList.add("bg-red-500");
 }
 
+function totalCart() {
+    return cart.reduce((total, item) => total + (item.price * item.quantidade), 0);
+}
+
 checkoutBtn.addEventListener("click", function(){
     const isOpen = checkHour();
     if(!isOpen){
@@ -188,21 +192,18 @@ checkoutBtn.addEventListener("click", function(){
 
     const cartItems = cart.map((item)=> {
         return (
-            `${item.name} Quantidade: (${item.quantidade}) Preço: R$${item.price} |`
+            `${item.name} (${item.quantidade})`
         )
-    }).join("")
+    }).join(" | ")
+    
+    const total = totalCart().toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 
-    const message = encodeURIComponent(cartItems)
+    const message = encodeURIComponent(`${cartItems}\n\nTotal a pagar: ${total}\nEndereço: ${addressInput.value}`)
     const phone = "+55041992199541"
 
-    window.open(`https://wa.me/${phone}?text=${message} Endereço: ${addressInput.value}`, "_blank")
+    window.open(`https://wa.me/${phone}?text=${message}`, "_blank")
 
     cart = [];
+    addressInput.value = "";
     updateCartModal();
 })
-
-
-
-
-
-
